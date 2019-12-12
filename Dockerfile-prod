@@ -27,6 +27,9 @@ RUN npm install -g @quasar/cli
 
 CMD ["quasar", "build"]
 
+RUN pwd
+RUN ls
+
 ### production environment
 FROM nginx:1.16.0-alpine
 COPY --from=builder ${HOME}/dist /usr/share/nginx/html
