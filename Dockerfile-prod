@@ -9,7 +9,7 @@ RUN apt-get -y install autoconf automake libtool nasm make pkg-config git apt-ut
 
 # Create app directory
 RUN mkdir -p ${HOME}
-WORKDIR {HOME}
+WORKDIR ${HOME}
 
 # Versions
 RUN npm -v
