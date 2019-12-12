@@ -1,0 +1,34 @@
+### Build environment
+FROM node:latest as builder
+
+ENV HOME=/usr/src/app
+
+RUN apt-get update
+RUN apt-get upgrade -y
+RUN apt-get -y install autoconf automake libtool nasm make pkg-config git apt-utils
+
+# Create app directory
+RUN mkdir -p ${HOME}
+WORKDIR {HOME}
+
+# Versions
+RUN npm -v
+RUN node -v
+
+# Install web app dependencies
+COPY package.json .
+RUN npm install
+
+# Bundle app source
+COPY . {HOME}
+
+# Install quasar cli
+RUN npm install -g @quasar/cli
+
+RUN quasar build
+
+### production environment
+FROM nginx:1.16.0-alpine
+copy --from=builder ${HOME}/dist /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
