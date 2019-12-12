@@ -25,7 +25,7 @@ COPY . ${HOME}
 # Install quasar cli
 RUN npm install -g @quasar/cli
 
-CMD ["quasar", "build"]
+RUN quasar build
 
 RUN pwd
 RUN ls
