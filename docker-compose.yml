@@ -4,7 +4,7 @@ services:
   parasoft-front-end:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-prod
     container_name: parasoft-demo-front-end-container
     image: parasoft-demo-front-end-image
     ports:
