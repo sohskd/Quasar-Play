@@ -23,7 +23,7 @@ COPY . /usr/src/app
 # Install quasar cli
 RUN npm install -g @quasar/cli
 
-EXPOSE 8080
+EXPOSE 8082
 
 # Main command
 CMD ["quasar", "dev", "-t", "ios"]

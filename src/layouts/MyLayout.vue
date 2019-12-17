@@ -12,7 +12,7 @@
         />
       </q-toolbar>
       <div class="q-px-lg q-pt-xl q-mb-md">
-        <div class="text-h3">Todo Appli</div>
+        <div class="text-h3">Todo Application</div>
         <div class="text-subtitle1">{{ todaysDate }}</div>
       </div>
       <q-img src="statics/mountain.jpg"
