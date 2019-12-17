@@ -18,7 +18,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-prod
-      target: 'develop-stage'
+      target: develop-stage
     container_name: parasoft-demo-front-end-container
     ports:
     - '8080:8080'
