@@ -21,6 +21,6 @@ services:
     container_name: parasoft-demo-front-end-container
     image: parasoft-demo-front-end-image
     ports:
-    - '8080:8080'
+    - '8080:80'
     volumes:
     - '.:/app'
