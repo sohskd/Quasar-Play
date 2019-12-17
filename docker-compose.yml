@@ -1,18 +1,5 @@
 # version: "3"
 
-# services:
-#   parasoft-front-end:
-#     build:
-#       context: .
-#       dockerfile: Dockerfile-prod
-#     container_name: parasoft-demo-front-end-container
-#     image: parasoft-demo-front-end-image
-#     ports:
-#       - '8082:80'
-
-
-# for local development
-version: "3"
 services:
   parasoft-front-end:
     build:
@@ -21,6 +8,18 @@ services:
     container_name: parasoft-demo-front-end-container
     image: parasoft-demo-front-end-image
     ports:
-    - '8080:80'
-    volumes:
-    - '.:/app'
+      - '8082:80'
+
+# for local development
+# version: "3"
+# services:
+#   parasoft-front-end:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile-prod
+#     container_name: parasoft-demo-front-end-container
+#     image: parasoft-demo-front-end-image
+#     ports:
+#     - '8080:80'
+#     volumes:
+#     - '.:/app'
