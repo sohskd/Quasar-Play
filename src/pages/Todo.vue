@@ -1,13 +1,13 @@
 <template>
-  <q-page class="bg-grey-4 column">
-    <div class="row q-pa-sm bg-primary">
+  <q-page class="transparent column">
+    <div class="row q-pa-sm">
       <q-input
         v-model="newTask"
         @keyup.enter="addTask"
         class="col"
         square
         filled
-        bg-color="white"
+        bg-color="grey-8"
         placeholder="Add task"
         dense>
         <template v-slot:append>
@@ -21,7 +21,7 @@
       </q-input>
     </div>
     <q-list
-      class="bg-white"
+      class="transparent"
       separator
       bordered>
       <q-item

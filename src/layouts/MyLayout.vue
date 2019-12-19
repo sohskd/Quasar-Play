@@ -102,7 +102,7 @@ export default {
 .header-image {
   height: 100%;
   z-index: -1;
-  opacity: 0.2;
+  opacity: 0.7;
   filter:grayscale(100%);
 }
 </style>
